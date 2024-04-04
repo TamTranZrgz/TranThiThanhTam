@@ -151,8 +151,8 @@ namespace TranThiThanhTam
         // Hien thi danh sach viec can lam
         public void HienThiDanhSachVcl(List<ViecCanLam> dsViecCanLam)
         {
-            // hien thi tieu de cot
-            Console.WriteLine("Danh sach viec can lam");
+             
+            Console.WriteLine("Danh sach viec can lam"); 
             // hien thi danh sach viec can lam
             if (dsViecCanLam != null && dsViecCanLam.Count > 0)
             {
@@ -271,14 +271,14 @@ namespace TranThiThanhTam
                         }
                         else
                         {
-                            Console.WriteLine("\nDanh sach viec can lam rong!");
+                            Console.WriteLine("\nDanh sach viec can lam rong ");
                         }
-                        break;
+                        break; 
                     case 0:
-                        Console.WriteLine("\nBan da chon thoat khoi ung dung!");
+                        Console.WriteLine("\nBan da chon thoat khoi ung dung ");
                         return;
                     default:
-                        Console.WriteLine("\nKhong co chuc nang nay trong menu!");
+                        Console.WriteLine("\nKhong co chuc nang nay trong menu ");
                         Console.WriteLine("\nBan hay chon chuc nang trong menu.");
                         break;
                 }
