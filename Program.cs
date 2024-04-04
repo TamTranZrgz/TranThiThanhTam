@@ -144,18 +144,8 @@ namespace TranThiThanhTam
         // Sap xep danh sach viec can lam theo muc do uu tien giam dan
         public List<ViecCanLam> XepTheoMucDoUuTienGiamDan()
         {
-            //ListSinhVien.Sort(delegate (SinhVien sv1, SinhVien sv2) {
-            //    return sv1.DiemTB.CompareTo(sv2.DiemTB);
-            //});
-
             return ListViecCanLam.OrderByDescending(o => o.MucDoUuTien).ToList();
 
-        }
-
-        // Truy xuat danh sach viec can lam hien tai
-        public List<ViecCanLam> getListViecCanLam()
-        {
-            return ListViecCanLam;
         }
 
         // Hien thi danh sach viec can lam
@@ -171,8 +161,18 @@ namespace TranThiThanhTam
                     Console.WriteLine("Viec lam: {0}; Muc do uu tien: {1}, Thong tin: {2}, Trang thai: {3}",
                                       vcl.TenViecLam, vcl.MucDoUuTien, vcl.ThongTin, vcl.TrangThai);
                 }
+            } else
+            {
+                Console.WriteLine("Danh sach viec can lam rong");
             }
             Console.WriteLine();
+        }
+
+
+        // Truy xuat danh sach viec can lam hien tai
+        public List<ViecCanLam> getListViecCanLam()
+        {
+            return ListViecCanLam;
         }
 
     }
@@ -181,18 +181,6 @@ namespace TranThiThanhTam
         static void Main(string[] args)
         {
             QuanLyViecCanLam quanLyViecCanLam = new QuanLyViecCanLam();
-
-            // 1. Cho phép khai báo thông tin các việc cần làm.
-
-            // 2. Cho phép xóa thông tin việc cần làm dựa vào vị trí.
-
-            // 3. Cho phép cập nhật trạng thái dựa vào tên việc cần làm.
-
-            // 4. Hỗ trợ tìm kiếm việc cần dựa vào tên hoặc độ ưu tiên.
-
-            // 5. Hiển thị danh sách các việc cần làm theo độ ưu tiên giảm dần.
-
-            // 6. Hiển thị toàn bộ danh sách việc cần làm mà người dùng đã khai báo.
 
             while (true)
             {
@@ -272,7 +260,7 @@ namespace TranThiThanhTam
                         }
                         else
                         {
-                            Console.WriteLine("\nDanh sach sinh vien trong!");
+                            Console.WriteLine("\nDanh sach viec can lam rong!");
                         }
                         break;
                     case 6:
@@ -283,15 +271,15 @@ namespace TranThiThanhTam
                         }
                         else
                         {
-                            Console.WriteLine("\nDanh sach sinh vien rong!");
+                            Console.WriteLine("\nDanh sach viec can lam rong!");
                         }
                         break;
                     case 0:
                         Console.WriteLine("\nBan da chon thoat khoi ung dung!");
                         return;
                     default:
-                        Console.WriteLine("\nKhong co chuc nang nay!");
-                        Console.WriteLine("\nHay chon chuc nang trong hop menu.");
+                        Console.WriteLine("\nKhong co chuc nang nay trong menu!");
+                        Console.WriteLine("\nBan hay chon chuc nang trong menu.");
                         break;
                 }
             }
