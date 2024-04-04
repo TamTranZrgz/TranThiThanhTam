@@ -6,21 +6,20 @@ using System.Threading.Tasks;
 
 namespace TranThiThanhTam
 {
-    // Xây dựng ứng dụng dạng Console Application cho phép người dùng quản lý, ghi chú các việc cần làm với một số yêu cầu như sau
 
-    // Xây dựng lớp việc cần làm với các thông tin sau
+    // Xay dung lop viec can lam voi cac thong tin (viec can lam, mu do uu tien, thong tin, trang thai)
     class ViecCanLam
     {
-        // 1. Tên việc cần làm.
+        // 1. Ten viec can lam
         public string TenViecLam { get; set; } 
 
-        // 2. Độ ưu tiên (Điểm số 1 đến 5 với 1 là ít ưu tiên nhất).
+        // 2. Do uu tien (Diem uu tien 1 den 5 voi 1 la muc do thap nhat).
         public int MucDoUuTien { get; set; }
 
-        // 3. Mô tả thông tin việc cần làm.
+        // 3. Mo ta thong tin viec can lam.
         public string ThongTin { get; set; }
 
-        // 4. Trạng thái của việc cần làm.
+        // 4. Trang thai viec can lam.
         public string TrangThai { get; set; }
     }
 
@@ -33,6 +32,7 @@ namespace TranThiThanhTam
             ListViecCanLam = new List<ViecCanLam>();
         }
 
+        // Dem so luong viec can lam
         public int SoLuongViecCanLam()
         {
             int Count = 0;
@@ -64,7 +64,7 @@ namespace TranThiThanhTam
 
         }
 
-        // Tim viec can lam dua vao index
+        // Tim viec can lam dua vao index (vi tri)
         public ViecCanLam TimVclDuaVaoViTri(int viTri)
         {
             ViecCanLam ketQua = null;
@@ -76,7 +76,7 @@ namespace TranThiThanhTam
         }
 
 
-        // Xoa thong tin viec can lam dua vao index - vi tri
+        // Xoa thong tin viec can lam dua vao index (vi tri)
         public bool XoaVclDuaVaoViTri(int viTri)
         {
             bool IsDeleted = false;
